@@ -5,7 +5,7 @@ namespace Zigurous.Physics
     /// <summary>
     /// An object that produces a magnetic field that attracts objects.
     /// </summary>
-    public class Magnet : MonoBehaviour
+    public sealed class Magnet : MonoBehaviour
     {
         /// <summary>
         /// The strength of the magnet. If an object is within multiple magnetic
@@ -21,18 +21,18 @@ namespace Zigurous.Physics
         /// </summary>
         [Tooltip("The radius of the magnetic field produced by the magnet. Magnetic objects within the radius are attracted to the magnet.")]
         [SerializeField]
-        private float _fieldRadius = 10.0f;
+        private float _radius = 10.0f;
 
         /// <summary>
         /// The radius of the magnetic field produced by the magnet. Magnetic
         /// objects within the radius are attracted to the magnet.
         /// </summary>
-        public float fieldRadius
+        public float radius
         {
-            get => _fieldRadius;
+            get => _radius;
             set
             {
-                _fieldRadius = value;
+                _radius = value;
                 this.magneticField.radius = value;
             }
         }
@@ -41,26 +41,26 @@ namespace Zigurous.Physics
         /// The sphere collider that represents the magnetic field of the
         /// magnet.
         /// </summary>
-        public SphereCollider magneticField { get; protected set; }
+        public SphereCollider magneticField { get; private set; }
 
-        protected virtual void Awake()
+        private void Awake()
         {
             this.magneticField = this.gameObject.AddComponent<SphereCollider>();
             this.magneticField.isTrigger = true;
-            this.magneticField.radius = _fieldRadius;
+            this.magneticField.radius = this.radius;
             this.magneticField.hideFlags = HideFlags.HideInInspector;
         }
 
-        protected virtual void OnDestroy()
-        {
-            this.magneticField = null;
-        }
-
-        protected virtual void OnValidate()
+        private void OnValidate()
         {
             if (this.magneticField != null) {
-                this.magneticField.radius = _fieldRadius;
+                this.magneticField.radius = this.radius;
             }
+        }
+
+        private void OnDestroy()
+        {
+            Destroy(this.magneticField);
         }
 
     }
