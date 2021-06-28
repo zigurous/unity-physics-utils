@@ -6,6 +6,7 @@ namespace Zigurous.Physics
     /// Adds an explosion force to all rigidbodies within a set radius upon
     /// being triggered.
     /// </summary>
+    [AddComponentMenu("Zigurous/Physics/Explosion")]
     public class Explosion : MonoBehaviour
     {
         /// <summary>

@@ -7,6 +7,7 @@ namespace Zigurous.Physics
     /// Invokes a custom unity event OnCollisionEnter2D.
     /// </summary>
     [RequireComponent(typeof(Collider2D))]
+    [AddComponentMenu("Zigurous/Physics/Events/Collision Enter 2D")]
     public class CollisionEnter2D : MonoBehaviour
     {
         [System.Serializable]

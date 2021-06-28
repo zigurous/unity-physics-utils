@@ -7,6 +7,7 @@ namespace Zigurous.Physics
     /// Invokes a custom unity event OnTriggerEnter2D.
     /// </summary>
     [RequireComponent(typeof(Collider2D))]
+    [AddComponentMenu("Zigurous/Physics/Events/Trigger Enter 2D")]
     public class TriggerEnter2D : MonoBehaviour
     {
         [System.Serializable]

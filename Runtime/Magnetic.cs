@@ -6,6 +6,7 @@ namespace Zigurous.Physics
     /// <summary>
     /// An object with magnetic properties that can be attracted to a magnet.
     /// </summary>
+    [AddComponentMenu("Zigurous/Physics/Magnetic")]
     public sealed class Magnetic : MonoBehaviour
     {
         /// <summary>

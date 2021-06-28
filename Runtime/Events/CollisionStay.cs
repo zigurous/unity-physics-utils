@@ -7,6 +7,7 @@ namespace Zigurous.Physics
     /// Invokes a custom unity event OnCollisionStay.
     /// </summary>
     [RequireComponent(typeof(Collider))]
+    [AddComponentMenu("Zigurous/Physics/Events/Collision Stay")]
     public class CollisionStay : MonoBehaviour
     {
         [System.Serializable]

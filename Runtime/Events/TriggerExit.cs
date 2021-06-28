@@ -7,6 +7,7 @@ namespace Zigurous.Physics
     /// Invokes a custom unity event OnTriggerExit.
     /// </summary>
     [RequireComponent(typeof(Collider))]
+    [AddComponentMenu("Zigurous/Physics/Events/Trigger Exit")]
     public class TriggerExit : MonoBehaviour
     {
         [System.Serializable]

@@ -7,6 +7,7 @@ namespace Zigurous.Physics
     /// Invokes a custom unity event OnCollisionExit.
     /// </summary>
     [RequireComponent(typeof(Collider))]
+    [AddComponentMenu("Zigurous/Physics/Events/Collision Exit")]
     public class CollisionExit : MonoBehaviour
     {
         [System.Serializable]
