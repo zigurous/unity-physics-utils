@@ -1,8 +1,4 @@
-# Physics Utils
-
-The Physics Utils package contains physics-related scripts and utilities for Unity projects.
-
-## Installation
+# Installation
 
 Use the Unity [Package Manager](https://docs.unity3d.com/Manual/upm-ui.html) to install the Physics Utils package.
 
@@ -29,3 +25,9 @@ Import the package namespace in each script or file you want to use it.
 ```csharp
 using Zigurous.Physics;
 ```
+
+### Source Code
+
+The source code for the Physics Utils package is in the following repository:
+
+- https://github.com/zigurous/unity-physics-utils
