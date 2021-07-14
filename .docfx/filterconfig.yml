@@ -5,3 +5,13 @@ apiRules:
     uidRegex: ^UnityEngine
 - exclude:
     uidRegex: ^UnityEditor
+- exclude:
+    uidRegex: ^Zigurous.Physics.Explosion.Start
+- exclude:
+    uidRegex: ^Zigurous.Physics.Explosion.OnCollisionEnter
+- exclude:
+    uidRegex: ^Zigurous.Physics.Explosion.OnCollisionExit
+- exclude:
+    uidRegex: ^Zigurous.Physics.Explosion.OnTriggerEnter
+- exclude:
+    uidRegex: ^Zigurous.Physics.Explosion.OnTriggerExit
