@@ -1,6 +1,6 @@
 # Physics Utils
 
-The Physics Utils package contains physics-related scripts and utilities for Unity projects.
+The Physics Utils package contains physics-related scripts and utilities for Unity projects. The package is still very early in development, and new scripts and functionality will be added over time.
 
 ## Installation
 
