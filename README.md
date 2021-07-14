@@ -29,3 +29,11 @@ Import the package namespace in each script or file you want to use it.
 ```csharp
 using Zigurous.Physics;
 ```
+
+## Reference
+
+- [Event Behaviors](https://docs.zigurous.com/com.zigurous.physics/manual/events.html)
+- [Physics Materials](https://docs.zigurous.com/com.zigurous.physics/manual/materials.html)
+- [Explosion (Script)](https://docs.zigurous.com/com.zigurous.physics/api/Zigurous.Physics.Explosion.html)
+- [Magnet (Script)](https://docs.zigurous.com/com.zigurous.physics/api/Zigurous.Physics.Magnet.html)
+- [Magnetic (Script)](https://docs.zigurous.com/com.zigurous.physics/api/Zigurous.Physics.Magnetic.html)
