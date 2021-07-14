@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using UnityEngine.Events;
 
-namespace Zigurous.Physics
+namespace Zigurous.Physics.Events
 {
     /// <summary>
     /// Invokes a custom unity event OnTriggerEnter.
@@ -10,19 +9,20 @@ namespace Zigurous.Physics
     [AddComponentMenu("Zigurous/Physics/Events/Trigger Enter")]
     public class TriggerEnter : MonoBehaviour
     {
-        [System.Serializable]
-        public class Event : UnityEvent<Collider> {}
-
         /// <summary>
         /// The event invoked during OnTriggerEnter.
         /// </summary>
         [Tooltip("The event invoked during OnTriggerEnter.")]
-        public Event onEnter;
+        public ColliderEvent onTriggerEnter;
 
+        /// <summary>
+        /// Invokes the custom unity event in response to OnTriggerEnter.
+        /// </summary>
+        /// <param name="other">The collider reference to send with the event.</param>
         protected virtual void OnTriggerEnter(Collider other)
         {
-            if (this.onEnter != null) {
-                this.onEnter.Invoke(other);
+            if (this.onTriggerEnter != null) {
+                this.onTriggerEnter.Invoke(other);
             }
         }
 

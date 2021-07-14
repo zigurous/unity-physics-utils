@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using UnityEngine.Events;
 
-namespace Zigurous.Physics
+namespace Zigurous.Physics.Events
 {
     /// <summary>
     /// Invokes a custom unity event OnTriggerStay2D.
@@ -10,19 +9,20 @@ namespace Zigurous.Physics
     [AddComponentMenu("Zigurous/Physics/Events/Trigger Stay 2D")]
     public class TriggerStay2D : MonoBehaviour
     {
-        [System.Serializable]
-        public class Event : UnityEvent<Collider2D> {}
-
         /// <summary>
         /// The event invoked during OnTriggerStay2D.
         /// </summary>
         [Tooltip("The event invoked during OnTriggerStay2D.")]
-        public Event onStay;
+        public ColliderEvent2D onTriggerStay2D;
 
+        /// <summary>
+        /// Invokes the custom unity event in response to OnTriggerStay2D.
+        /// </summary>
+        /// <param name="other">The collider reference to send with the event.</param>
         protected virtual void OnTriggerStay2D(Collider2D other)
         {
-            if (this.onStay != null) {
-                this.onStay.Invoke(other);
+            if (this.onTriggerStay2D != null) {
+                this.onTriggerStay2D.Invoke(other);
             }
         }
 
