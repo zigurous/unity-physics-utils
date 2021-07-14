@@ -95,6 +95,9 @@ namespace Zigurous.Physics
         [Tooltip("Destroys the game object of the script after exploding.")]
         public bool destroyOnExplode;
 
+        /// <summary>
+        /// Triggers the explosion.
+        /// </summary>
         public virtual void Explode()
         {
             Collider[] colliders = UnityEngine.Physics.OverlapSphere(this.transform.position, this.radius, this.layerMask);
@@ -113,6 +116,11 @@ namespace Zigurous.Physics
             }
         }
 
+        /// <summary>
+        /// Triggers the explosion after the given amount of seconds specified
+        /// by <paramref name="fuseTime"/>.
+        /// </summary>
+        /// <param name="fuseTime">The amount of seconds before the explosion takes effect.</param>
         public void Explode(float fuseTime)
         {
             if (fuseTime > 0.0f) {
