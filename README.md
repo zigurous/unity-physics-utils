@@ -1,6 +1,19 @@
 # Physics Utils
 
+[![](https://img.shields.io/badge/github-repo-blue?logo=github)](https://github.com/zigurous/unity-physics-utils)
+[![](https://img.shields.io/github/package-json/v/zigurous/unity-physics-utils)](https://github.com/zigurous/unity-physics-utils/releases)
+[![](https://img.shields.io/badge/docs-link-success)](https://docs.zigurous.com/com.zigurous.physics)
+[![](https://img.shields.io/github/license/zigurous/unity-physics-utils)](https://github.com/zigurous/unity-physics-utils/blob/main/LICENSE.md)
+
 The Physics Utils package contains physics-related scripts and utilities for Unity projects. The package is still early in development, and more functionality will be added over time.
+
+## Reference
+
+- [Event Behaviors](https://docs.zigurous.com/com.zigurous.physics/manual/events.html)
+- [Physics Materials](https://docs.zigurous.com/com.zigurous.physics/manual/materials.html)
+- [Explosion (Script)](https://docs.zigurous.com/com.zigurous.physics/api/Zigurous.Physics.Explosion.html)
+- [Magnet (Script)](https://docs.zigurous.com/com.zigurous.physics/api/Zigurous.Physics.Magnet.html)
+- [Magnetic (Script)](https://docs.zigurous.com/com.zigurous.physics/api/Zigurous.Physics.Magnetic.html)
 
 ## Installation
 
@@ -29,11 +42,3 @@ Import the package namespace in each script or file you want to use it.
 ```csharp
 using Zigurous.Physics;
 ```
-
-## Reference
-
-- [Event Behaviors](https://docs.zigurous.com/com.zigurous.physics/manual/events.html)
-- [Physics Materials](https://docs.zigurous.com/com.zigurous.physics/manual/materials.html)
-- [Explosion (Script)](https://docs.zigurous.com/com.zigurous.physics/api/Zigurous.Physics.Explosion.html)
-- [Magnet (Script)](https://docs.zigurous.com/com.zigurous.physics/api/Zigurous.Physics.Magnet.html)
-- [Magnetic (Script)](https://docs.zigurous.com/com.zigurous.physics/api/Zigurous.Physics.Magnetic.html)
