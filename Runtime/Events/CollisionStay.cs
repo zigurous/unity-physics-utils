@@ -13,7 +13,7 @@ namespace Zigurous.Physics.Events
         /// The event invoked during OnCollisionStay.
         /// </summary>
         [Tooltip("The event invoked during OnCollisionStay.")]
-        public CollisionEvent onCollisionStay;
+        public CollisionEvent collisionEvent;
 
         /// <summary>
         /// Invokes the custom unity event in response to OnCollisionStay.
@@ -21,8 +21,8 @@ namespace Zigurous.Physics.Events
         /// <param name="collision">The collision data to send with the event.</param>
         protected virtual void OnCollisionStay(Collision collision)
         {
-            if (this.onCollisionStay != null) {
-                this.onCollisionStay.Invoke(collision);
+            if (this.collisionEvent != null) {
+                this.collisionEvent.Invoke(collision);
             }
         }
 

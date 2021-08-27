@@ -13,7 +13,7 @@ namespace Zigurous.Physics.Events
         /// The event invoked during OnTriggerStay.
         /// </summary>
         [Tooltip("The event invoked during OnTriggerStay.")]
-        public ColliderEvent onTriggerStay;
+        public ColliderEvent triggerEvent;
 
         /// <summary>
         /// Invokes the custom unity event in response to OnTriggerStay.
@@ -21,8 +21,8 @@ namespace Zigurous.Physics.Events
         /// <param name="other">The collider reference to send with the event.</param>
         protected virtual void OnTriggerStay(Collider other)
         {
-            if (this.onTriggerStay != null) {
-                this.onTriggerStay.Invoke(other);
+            if (this.triggerEvent != null) {
+                this.triggerEvent.Invoke(other);
             }
         }
 

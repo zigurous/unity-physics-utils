@@ -13,7 +13,7 @@ namespace Zigurous.Physics.Events
         /// The event invoked during OnCollisionEnter.
         /// </summary>
         [Tooltip("The event invoked during OnCollisionEnter.")]
-        public CollisionEvent onCollisionEnter;
+        public CollisionEvent collisionEvent;
 
         /// <summary>
         /// Invokes the custom unity event in response to OnCollisionEnter.
@@ -21,8 +21,8 @@ namespace Zigurous.Physics.Events
         /// <param name="collision">The collision data to send with the event.</param>
         protected virtual void OnCollisionEnter(Collision collision)
         {
-            if (this.onCollisionEnter != null) {
-                this.onCollisionEnter.Invoke(collision);
+            if (this.collisionEvent != null) {
+                this.collisionEvent.Invoke(collision);
             }
         }
 

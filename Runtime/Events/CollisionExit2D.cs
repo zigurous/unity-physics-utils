@@ -13,7 +13,7 @@ namespace Zigurous.Physics.Events
         /// The event invoked during OnCollisionExit2D.
         /// </summary>
         [Tooltip("The event invoked during OnCollisionExit2D.")]
-        public CollisionEvent2D onCollisionExit2D;
+        public CollisionEvent2D collisionEvent;
 
         /// <summary>
         /// Invokes the custom unity event in response to OnCollisionExit2D.
@@ -21,8 +21,8 @@ namespace Zigurous.Physics.Events
         /// <param name="collision">The collision data to send with the event.</param>
         protected virtual void OnCollisionExit2D(Collision2D collision)
         {
-            if (this.onCollisionExit2D != null) {
-                this.onCollisionExit2D.Invoke(collision);
+            if (this.collisionEvent != null) {
+                this.collisionEvent.Invoke(collision);
             }
         }
 

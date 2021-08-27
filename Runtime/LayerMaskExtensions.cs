@@ -8,11 +8,11 @@ namespace Zigurous.Physics
     public static class LayerMaskExtensions
     {
         /// <summary>
-        /// Checks if the given <paramref name="layer"/> is included in the
-        /// LayerMask.
+        /// Checks if the given layer is included in the mask.
         /// </summary>
-        /// <param name="mask">The LayerMask to check.</param>
+        /// <param name="mask">The mask to check.</param>
         /// <param name="layer">The layer to check.</param>
+        /// <returns>True if the layer is included in the mask, false otherwise.</returns>
         public static bool Contains(this LayerMask mask, int layer)
         {
             return mask == (mask | (1 << layer));

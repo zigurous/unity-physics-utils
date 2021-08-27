@@ -12,12 +12,12 @@ namespace Zigurous.Physics
         /// <summary>
         /// The rigidbody of the magnetic object that handles moving the object
         /// toward attracted magnets. When not present, forces will be added
-        /// directly to the transform's position instead.
+        /// directly to the transform's position instead (Read only).
         /// </summary>
         public new Rigidbody rigidbody { get; private set; }
 
         /// <summary>
-        /// The magnets the object is currently attracted to.
+        /// The magnets the object is currently attracted to (Read only).
         /// </summary>
         public List<Magnet> attractedMagnets { get; private set; } = new List<Magnet>(1);
 

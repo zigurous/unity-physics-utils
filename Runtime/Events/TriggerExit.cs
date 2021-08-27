@@ -13,7 +13,7 @@ namespace Zigurous.Physics.Events
         /// The event invoked during OnTriggerExit.
         /// </summary>
         [Tooltip("The event invoked during OnTriggerExit.")]
-        public ColliderEvent onTriggerExit;
+        public ColliderEvent triggerEvent;
 
         /// <summary>
         /// Invokes the custom unity event in response to OnTriggerExit.
@@ -21,8 +21,8 @@ namespace Zigurous.Physics.Events
         /// <param name="other">The collider reference to send with the event.</param>
         protected virtual void OnTriggerExit(Collider other)
         {
-            if (this.onTriggerExit != null) {
-                this.onTriggerExit.Invoke(other);
+            if (this.triggerEvent != null) {
+                this.triggerEvent.Invoke(other);
             }
         }
 

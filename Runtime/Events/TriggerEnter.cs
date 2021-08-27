@@ -13,7 +13,7 @@ namespace Zigurous.Physics.Events
         /// The event invoked during OnTriggerEnter.
         /// </summary>
         [Tooltip("The event invoked during OnTriggerEnter.")]
-        public ColliderEvent onTriggerEnter;
+        public ColliderEvent triggerEvent;
 
         /// <summary>
         /// Invokes the custom unity event in response to OnTriggerEnter.
@@ -21,8 +21,8 @@ namespace Zigurous.Physics.Events
         /// <param name="other">The collider reference to send with the event.</param>
         protected virtual void OnTriggerEnter(Collider other)
         {
-            if (this.onTriggerEnter != null) {
-                this.onTriggerEnter.Invoke(other);
+            if (this.triggerEvent != null) {
+                this.triggerEvent.Invoke(other);
             }
         }
 

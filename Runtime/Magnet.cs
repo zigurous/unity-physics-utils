@@ -9,6 +9,12 @@ namespace Zigurous.Physics
     public sealed class Magnet : MonoBehaviour
     {
         /// <summary>
+        /// The sphere collider that represents the magnetic field of the
+        /// magnet (Read only).
+        /// </summary>
+        public SphereCollider magneticField { get; private set; }
+
+        /// <summary>
         /// The strength of the magnet. If an object is within multiple magnetic
         /// fields, then it will be attracted to the magnet with the higher
         /// strength.
@@ -37,12 +43,6 @@ namespace Zigurous.Physics
                 this.magneticField.radius = value;
             }
         }
-
-        /// <summary>
-        /// The sphere collider that represents the magnetic field of the
-        /// magnet.
-        /// </summary>
-        public SphereCollider magneticField { get; private set; }
 
         private void Awake()
         {

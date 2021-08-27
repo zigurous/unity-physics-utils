@@ -52,16 +52,16 @@ namespace Zigurous.Physics
         public Trigger trigger = Trigger.Manual;
 
         /// <summary>
-        /// The layers that can be affected by the explosion.
-        /// </summary>
-        [Tooltip("The layers that can be affected by the explosion.")]
-        public LayerMask layerMask = 1;
-
-        /// <summary>
         /// The type of force applied to affected rigidbodies.
         /// </summary>
         [Tooltip("The type of force applied to affected rigidbodies.")]
         public ForceMode forceMode = ForceMode.Force;
+
+        /// <summary>
+        /// The layers that can be affected by the explosion.
+        /// </summary>
+        [Tooltip("The layers that can be affected by the explosion.")]
+        public LayerMask layerMask = 1;
 
         /// <summary>
         /// The radius of the sphere within which the explosion has its effect.
@@ -118,7 +118,7 @@ namespace Zigurous.Physics
 
         /// <summary>
         /// Triggers the explosion after the given amount of seconds specified
-        /// by <paramref name="fuseTime"/>.
+        /// by a fuse time.
         /// </summary>
         /// <param name="fuseTime">The amount of seconds before the explosion takes effect.</param>
         public void Explode(float fuseTime)
