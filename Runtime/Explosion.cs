@@ -123,7 +123,7 @@ namespace Zigurous.Physics
         /// <param name="fuseTime">The amount of seconds before the explosion takes effect.</param>
         public void Explode(float fuseTime)
         {
-            if (fuseTime > 0.0f) {
+            if (fuseTime > 0f) {
                 Invoke(nameof(Explode), fuseTime);
             } else {
                 Explode();

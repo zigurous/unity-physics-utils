@@ -20,7 +20,7 @@ namespace Zigurous.Physics
         /// strength.
         /// </summary>
         [Tooltip("The strength of the magnet. If an object is within multiple magnetic fields, then it will be attracted to the magnet with the higher strength.")]
-        public float strength = 1.0f;
+        public float strength = 1f;
 
         /// <summary>
         /// The radius of the magnetic field produced by the magnet. Magnetic
@@ -28,7 +28,7 @@ namespace Zigurous.Physics
         /// </summary>
         [Tooltip("The radius of the magnetic field produced by the magnet. Magnetic objects within the radius are attracted to the magnet.")]
         [SerializeField]
-        private float _radius = 10.0f;
+        private float _radius = 10f;
 
         /// <summary>
         /// The radius of the magnetic field produced by the magnet. Magnetic
