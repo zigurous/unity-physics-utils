@@ -6,10 +6,9 @@ The **Physics Utils** package contains physics-related scripts and utilities for
 
 ## Reference
 
-- [Event Behaviors](https://docs.zigurous.com/com.zigurous.physics/manual/events)
+- [Behaviors](https://docs.zigurous.com/com.zigurous.physics/manual/behaviors)
+- [Event Callbacks](https://docs.zigurous.com/com.zigurous.physics/manual/events)
 - [Physics Materials](https://docs.zigurous.com/com.zigurous.physics/manual/materials)
-- [Explosions](https://docs.zigurous.com/com.zigurous.physics/manual/explosions)
-- [Magnets](https://docs.zigurous.com/com.zigurous.physics/manual/magnets)
 
 ## Installation
 
@@ -23,11 +22,6 @@ Use the Unity [Package Manager](https://docs.unity3d.com/Manual/upm-ui.html) to 
 ```http
 https://github.com/zigurous/unity-physics-utils.git
 ```
-
-For more information on the Package Manager and installing packages, see the following pages:
-
-- [Unity's Package Manager](https://docs.unity3d.com/Manual/Packages.html)
-- [Installing from a Git URL](https://docs.unity3d.com/Manual/upm-ui-giturl.html)
 
 ### Importing
 
