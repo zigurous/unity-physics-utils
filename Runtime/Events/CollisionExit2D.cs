@@ -10,6 +10,12 @@ namespace Zigurous.Physics.Events
     public class CollisionExit2D : MonoBehaviour
     {
         /// <summary>
+        /// The layers that this object can collide with.
+        /// </summary>
+        [Tooltip("The layers that this object can collide with.")]
+        public LayerMask layerMask = ~0;
+
+        /// <summary>
         /// The event invoked during OnCollisionExit2D.
         /// </summary>
         [Tooltip("The event invoked during OnCollisionExit2D.")]
@@ -21,7 +27,7 @@ namespace Zigurous.Physics.Events
         /// <param name="collision">The collision data to send with the event.</param>
         protected virtual void OnCollisionExit2D(Collision2D collision)
         {
-            if (this.collisionEvent != null) {
+            if (this.collisionEvent != null && this.layerMask.Contains(collision.gameObject.layer)) {
                 this.collisionEvent.Invoke(collision);
             }
         }
