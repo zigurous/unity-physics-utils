@@ -13,6 +13,7 @@
   "repository": "https://github.com/zigurous/unity-physics-utils",
   "documentationUrl": "https://docs.zigurous.com/com.zigurous.physics",
   "changelogUrl": "https://docs.zigurous.com/com.zigurous.physics/changelog",
+  "licensesUrl": "https://docs.zigurous.com/com.zigurous.physics/license",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@zigurous"
   },
