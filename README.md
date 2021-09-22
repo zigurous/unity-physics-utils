@@ -2,7 +2,7 @@
 
 [![](https://img.shields.io/badge/github-repo-blue?logo=github)](https://github.com/zigurous/unity-physics-utils) [![](https://img.shields.io/github/package-json/v/zigurous/unity-physics-utils)](https://github.com/zigurous/unity-physics-utils/releases) [![](https://img.shields.io/badge/docs-link-success)](https://docs.zigurous.com/com.zigurous.physics) [![](https://img.shields.io/github/license/zigurous/unity-physics-utils)](https://github.com/zigurous/unity-physics-utils/blob/main/LICENSE.md)
 
-The **Physics Utils** package contains physics-related scripts and utilities for Unity projects. The package is still early in development, and more functionality will be added over time.
+The **Physics Utils** package contains scripts and utilities for working with physics behaviors in Unity projects. The package is still early in development, and more functionality will be added over time.
 
 ## Reference
 

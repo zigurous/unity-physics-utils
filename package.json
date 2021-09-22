@@ -2,7 +2,7 @@
   "name": "com.zigurous.physics",
   "version": "0.4.0",
   "displayName": "Zigurous Physics Utils",
-  "description": "The Physics Utils package contains physics-related scripts and utilities for Unity projects.",
+  "description": "The Physics Utils package contains scripts and utilities for working with physics behaviors in Unity projects.",
   "unity": "2019.4",
   "keywords": [
     "physics",
