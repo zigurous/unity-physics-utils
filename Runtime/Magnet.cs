@@ -36,28 +36,28 @@ namespace Zigurous.Physics
             set
             {
                 _radius = value;
-                this.magneticField.radius = value;
+                magneticField.radius = value;
             }
         }
 
         private void Awake()
         {
-            this.magneticField = this.gameObject.AddComponent<SphereCollider>();
-            this.magneticField.isTrigger = true;
-            this.magneticField.radius = this.radius;
-            this.magneticField.hideFlags = HideFlags.HideInInspector;
+            magneticField = gameObject.AddComponent<SphereCollider>();
+            magneticField.isTrigger = true;
+            magneticField.radius = radius;
+            magneticField.hideFlags = HideFlags.HideInInspector;
         }
 
         private void OnValidate()
         {
-            if (this.magneticField != null) {
-                this.magneticField.radius = this.radius;
+            if (magneticField != null) {
+                magneticField.radius = radius;
             }
         }
 
         private void OnDestroy()
         {
-            Destroy(this.magneticField);
+            Destroy(magneticField);
         }
 
     }

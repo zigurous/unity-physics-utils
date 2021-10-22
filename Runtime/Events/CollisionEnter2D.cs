@@ -27,8 +27,8 @@ namespace Zigurous.Physics.Events
         /// <param name="collision">The collision data to send with the event.</param>
         protected virtual void OnCollisionEnter2D(Collision2D collision)
         {
-            if (this.collisionEvent != null && this.layerMask.Contains(collision.gameObject.layer)) {
-                this.collisionEvent.Invoke(collision);
+            if (collisionEvent != null && layerMask.Contains(collision.gameObject.layer)) {
+                collisionEvent.Invoke(collision);
             }
         }
 

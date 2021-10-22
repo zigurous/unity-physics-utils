@@ -23,24 +23,24 @@ namespace Zigurous.Physics
 
         private void Awake()
         {
-            this.rigidbody = GetComponent<Rigidbody>();
+            rigidbody = GetComponent<Rigidbody>();
         }
 
         private void Update()
         {
-            if (this.rigidbody == null)
+            if (rigidbody == null)
             {
-                Vector3 force = CombineForces(this.transform.position);
-                this.transform.position += force * Time.deltaTime;
+                Vector3 force = CombineForces(transform.position);
+                transform.position += force * Time.deltaTime;
             }
         }
 
         private void FixedUpdate()
         {
-            if (this.rigidbody != null)
+            if (rigidbody != null)
             {
-                Vector3 force = CombineForces(this.rigidbody.position);
-                this.rigidbody.AddForce(force);
+                Vector3 force = CombineForces(rigidbody.position);
+                rigidbody.AddForce(force);
             }
         }
 
@@ -48,7 +48,7 @@ namespace Zigurous.Physics
         {
             Vector3 forces = Vector3.zero;
 
-            foreach (Magnet magnet in this.attractedMagnets) {
+            foreach (Magnet magnet in attractedMagnets) {
                 forces += CalculateForce(magnet, currentPosition);
             }
 
@@ -67,7 +67,7 @@ namespace Zigurous.Physics
             Magnet magnet = other.GetComponent<Magnet>();
 
             if (magnet != null) {
-                this.attractedMagnets.Add(magnet);
+                attractedMagnets.Add(magnet);
             }
         }
 
@@ -76,7 +76,7 @@ namespace Zigurous.Physics
             Magnet magnet = other.GetComponent<Magnet>();
 
             if (magnet != null) {
-                this.attractedMagnets.Remove(magnet);
+                attractedMagnets.Remove(magnet);
             }
         }
 

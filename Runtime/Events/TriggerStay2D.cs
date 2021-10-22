@@ -27,8 +27,8 @@ namespace Zigurous.Physics.Events
         /// <param name="other">The collider reference to send with the event.</param>
         protected virtual void OnTriggerStay2D(Collider2D other)
         {
-            if (this.triggerEvent != null && this.layerMask.Contains(other.gameObject.layer)) {
-                this.triggerEvent.Invoke(other);
+            if (triggerEvent != null && layerMask.Contains(other.gameObject.layer)) {
+                triggerEvent.Invoke(other);
             }
         }
 

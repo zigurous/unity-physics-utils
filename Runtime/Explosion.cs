@@ -100,19 +100,19 @@ namespace Zigurous.Physics
         /// </summary>
         public virtual void Explode()
         {
-            Collider[] colliders = UnityEngine.Physics.OverlapSphere(this.transform.position, this.radius, this.layerMask);
+            Collider[] colliders = UnityEngine.Physics.OverlapSphere(transform.position, radius, layerMask);
 
             for (int i = 0; i < colliders.Length; i++)
             {
                 Rigidbody rigidbody = colliders[i].attachedRigidbody;
 
                 if (rigidbody != null) {
-                    rigidbody.AddExplosionForce(this.strength, this.transform.position, this.radius, this.upwardsModifier);
+                    rigidbody.AddExplosionForce(strength, transform.position, radius, upwardsModifier);
                 }
             }
 
-            if (this.destroyOnExplode) {
-                Destroy(this.gameObject);
+            if (destroyOnExplode) {
+                Destroy(gameObject);
             }
         }
 
@@ -132,36 +132,36 @@ namespace Zigurous.Physics
 
         protected virtual void Start()
         {
-            if (this.trigger == Trigger.OnStart) {
-                Explode(this.fuseTime);
+            if (trigger == Trigger.OnStart) {
+                Explode(fuseTime);
             }
         }
 
         protected virtual void OnCollisionEnter(Collision collision)
         {
-            if (this.trigger == Trigger.OnCollisionEnter) {
-                Explode(this.fuseTime);
+            if (trigger == Trigger.OnCollisionEnter) {
+                Explode(fuseTime);
             }
         }
 
         protected virtual void OnCollisionExit(Collision collision)
         {
-            if (this.trigger == Trigger.OnCollisionExit) {
-                Explode(this.fuseTime);
+            if (trigger == Trigger.OnCollisionExit) {
+                Explode(fuseTime);
             }
         }
 
         protected virtual void OnTriggerEnter(Collider collider)
         {
-            if (this.trigger == Trigger.OnTriggerEnter) {
-                Explode(this.fuseTime);
+            if (trigger == Trigger.OnTriggerEnter) {
+                Explode(fuseTime);
             }
         }
 
         protected virtual void OnTriggerExit(Collider collider)
         {
-            if (this.trigger == Trigger.OnTriggerExit) {
-                Explode(this.fuseTime);
+            if (trigger == Trigger.OnTriggerExit) {
+                Explode(fuseTime);
             }
         }
 
