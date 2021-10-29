@@ -24,7 +24,7 @@ namespace Zigurous.Physics
 
         [SerializeField]
         [Tooltip("The radius of the magnetic field produced by the magnet. Magnetic objects within the radius are attracted to the magnet.")]
-        private float _radius = 10f;
+        private float m_Radius = 10f;
 
         /// <summary>
         /// The radius of the magnetic field produced by the magnet. Magnetic
@@ -32,10 +32,10 @@ namespace Zigurous.Physics
         /// </summary>
         public float radius
         {
-            get => _radius;
+            get => m_Radius;
             set
             {
-                _radius = value;
+                m_Radius = value;
                 magneticField.radius = value;
             }
         }
