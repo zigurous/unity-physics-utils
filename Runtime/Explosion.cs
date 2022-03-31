@@ -130,35 +130,35 @@ namespace Zigurous.Physics
             }
         }
 
-        protected virtual void Start()
+        private void Start()
         {
             if (trigger == Trigger.OnStart) {
                 Explode(fuseTime);
             }
         }
 
-        protected virtual void OnCollisionEnter(Collision collision)
+        private void OnCollisionEnter(Collision collision)
         {
             if (trigger == Trigger.OnCollisionEnter) {
                 Explode(fuseTime);
             }
         }
 
-        protected virtual void OnCollisionExit(Collision collision)
+        private void OnCollisionExit(Collision collision)
         {
             if (trigger == Trigger.OnCollisionExit) {
                 Explode(fuseTime);
             }
         }
 
-        protected virtual void OnTriggerEnter(Collider collider)
+        private void OnTriggerEnter(Collider collider)
         {
             if (trigger == Trigger.OnTriggerEnter) {
                 Explode(fuseTime);
             }
         }
 
-        protected virtual void OnTriggerExit(Collider collider)
+        private void OnTriggerExit(Collider collider)
         {
             if (trigger == Trigger.OnTriggerExit) {
                 Explode(fuseTime);
