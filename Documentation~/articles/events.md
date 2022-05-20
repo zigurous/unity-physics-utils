@@ -14,7 +14,7 @@ The great thing about Unity's event system is that it is not limited to only fun
 <br/>
 <hr/>
 
-## 🧱 Available Classes
+## 📟 Available Classes
 
 - [CollisionEnter](/api/Zigurous.Physics.Events/CollisionEnter)
 - [CollisionEnter2D](/api/Zigurous.Physics.Events/CollisionEnter2D)

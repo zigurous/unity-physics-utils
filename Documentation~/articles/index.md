@@ -8,17 +8,22 @@ The **Physics Utils** package contains physics-related scripts and utilities for
 
 <hr/>
 
-## 📌 Overview
+## Overview
 
-- [Scripting API](/api/Zigurous.Physics)
-- [Installation](/manual/installation)
-- [Changelog](/changelog)
-- [License](/license)
+#### ⚙️ [Installation](/installation)
+
+#### 🧰 [Scripting API](/api/Zigurous.Physics)
+
+#### 📋 [Changelog](/changelog)
+
+#### ⚖️ [License](/license)
 
 <hr/>
 
-## 📖 Reference
+## Reference
 
-- [Behaviors](/manual/behaviors)
-- [Event Callbacks](/manual/events)
-- [Physics Materials](/manual/materials)
+#### 🧲 [Behaviors](/manual/behaviors)
+
+#### 📟 [Event Callbacks](/manual/events)
+
+#### 🧊 [Physics Materials](/manual/materials)
