@@ -1,28 +1,35 @@
 ﻿using UnityEngine;
-using UnityEngine.Events;
 
-namespace Zigurous.Physics
+namespace Zigurous.Physics.Events
 {
     /// <summary>
     /// Invokes a custom unity event OnCollisionEnter.
     /// </summary>
-    [RequireComponent(typeof(Collider))]
     [AddComponentMenu("Zigurous/Physics/Events/Collision Enter")]
+    [HelpURL("https://docs.zigurous.com/com.zigurous.physics/api/Zigurous.Physics.Events/CollisionEnter")]
+    [RequireComponent(typeof(Collider))]
     public class CollisionEnter : MonoBehaviour
     {
-        [System.Serializable]
-        public class Event : UnityEvent<Collision> {}
+        /// <summary>
+        /// The layers that this object can collide with.
+        /// </summary>
+        [Tooltip("The layers that this object can collide with.")]
+        public LayerMask layerMask = ~0;
 
         /// <summary>
         /// The event invoked during OnCollisionEnter.
         /// </summary>
         [Tooltip("The event invoked during OnCollisionEnter.")]
-        public Event onEnter;
+        public CollisionEvent collisionEvent;
 
+        /// <summary>
+        /// Invokes the custom unity event in response to OnCollisionEnter.
+        /// </summary>
+        /// <param name="collision">The collision data to send with the event.</param>
         protected virtual void OnCollisionEnter(Collision collision)
         {
-            if (this.onEnter != null) {
-                this.onEnter.Invoke(collision);
+            if (collisionEvent != null && layerMask.Contains(collision.gameObject.layer)) {
+                collisionEvent.Invoke(collision);
             }
         }
 

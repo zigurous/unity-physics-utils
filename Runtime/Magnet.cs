@@ -6,23 +6,26 @@ namespace Zigurous.Physics
     /// An object that produces a magnetic field that attracts objects.
     /// </summary>
     [AddComponentMenu("Zigurous/Physics/Magnet")]
+    [HelpURL("https://docs.zigurous.com/com.zigurous.physics/api/Zigurous.Physics/Magnet")]
     public sealed class Magnet : MonoBehaviour
     {
+        /// <summary>
+        /// The sphere collider that represents the magnetic field of the
+        /// magnet (Read only).
+        /// </summary>
+        public SphereCollider magneticField { get; private set; }
+
         /// <summary>
         /// The strength of the magnet. If an object is within multiple magnetic
         /// fields, then it will be attracted to the magnet with the higher
         /// strength.
         /// </summary>
         [Tooltip("The strength of the magnet. If an object is within multiple magnetic fields, then it will be attracted to the magnet with the higher strength.")]
-        public float strength = 1.0f;
+        public float strength = 1f;
 
-        /// <summary>
-        /// The radius of the magnetic field produced by the magnet. Magnetic
-        /// objects within the radius are attracted to the magnet.
-        /// </summary>
-        [Tooltip("The radius of the magnetic field produced by the magnet. Magnetic objects within the radius are attracted to the magnet.")]
         [SerializeField]
-        private float _radius = 10.0f;
+        [Tooltip("The radius of the magnetic field produced by the magnet. Magnetic objects within the radius are attracted to the magnet.")]
+        private float m_Radius = 10f;
 
         /// <summary>
         /// The radius of the magnetic field produced by the magnet. Magnetic
@@ -30,38 +33,32 @@ namespace Zigurous.Physics
         /// </summary>
         public float radius
         {
-            get => _radius;
+            get => m_Radius;
             set
             {
-                _radius = value;
-                this.magneticField.radius = value;
+                m_Radius = value;
+                magneticField.radius = value;
             }
         }
 
-        /// <summary>
-        /// The sphere collider that represents the magnetic field of the
-        /// magnet.
-        /// </summary>
-        public SphereCollider magneticField { get; private set; }
-
         private void Awake()
         {
-            this.magneticField = this.gameObject.AddComponent<SphereCollider>();
-            this.magneticField.isTrigger = true;
-            this.magneticField.radius = this.radius;
-            this.magneticField.hideFlags = HideFlags.HideInInspector;
+            magneticField = gameObject.AddComponent<SphereCollider>();
+            magneticField.isTrigger = true;
+            magneticField.radius = radius;
+            magneticField.hideFlags = HideFlags.HideInInspector;
         }
 
         private void OnValidate()
         {
-            if (this.magneticField != null) {
-                this.magneticField.radius = this.radius;
+            if (magneticField != null) {
+                magneticField.radius = radius;
             }
         }
 
         private void OnDestroy()
         {
-            Destroy(this.magneticField);
+            Destroy(magneticField);
         }
 
     }

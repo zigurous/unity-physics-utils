@@ -1,16 +1,23 @@
 {
   "name": "com.zigurous.physics",
-  "version": "0.3.1",
-  "displayName": "Zigurous Physics Utils",
-  "description": "The Physics Utils package contains physics-related scripts and utilities for Unity projects.",
+  "version": "0.4.0",
+  "displayName": "Physics Utils",
+  "description": "The Physics Utils package contains scripts and utilities for working with physics behaviors in Unity projects.",
   "unity": "2019.4",
+  "repository": "https://github.com/zigurous/unity-physics-utils",
+  "documentationUrl": "https://docs.zigurous.com/com.zigurous.physics",
+  "changelogUrl": "https://docs.zigurous.com/com.zigurous.physics/changelog",
+  "licensesUrl": "https://docs.zigurous.com/com.zigurous.physics/license",
   "keywords": [
     "physics",
-    "utilities",
-    "extensions",
-    "scripts"
+    "rigidbody",
+    "collision",
+    "colliders",
+    "triggers",
+    "events",
+    "explosion",
+    "magnet"
   ],
-  "repository": "https://github.com/zigurous/unity-physics-utils",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@zigurous"
   },

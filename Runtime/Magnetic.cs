@@ -7,40 +7,41 @@ namespace Zigurous.Physics
     /// An object with magnetic properties that can be attracted to a magnet.
     /// </summary>
     [AddComponentMenu("Zigurous/Physics/Magnetic")]
+    [HelpURL("https://docs.zigurous.com/com.zigurous.physics/api/Zigurous.Physics/Magnetic")]
     public sealed class Magnetic : MonoBehaviour
     {
         /// <summary>
         /// The rigidbody of the magnetic object that handles moving the object
         /// toward attracted magnets. When not present, forces will be added
-        /// directly to the transform's position instead.
+        /// directly to the transform's position instead (Read only).
         /// </summary>
         public new Rigidbody rigidbody { get; private set; }
 
         /// <summary>
-        /// The magnets the object is currently attracted to.
+        /// The magnets the object is currently attracted to (Read only).
         /// </summary>
         public List<Magnet> attractedMagnets { get; private set; } = new List<Magnet>(1);
 
         private void Awake()
         {
-            this.rigidbody = GetComponent<Rigidbody>();
+            rigidbody = GetComponent<Rigidbody>();
         }
 
         private void Update()
         {
-            if (this.rigidbody == null)
+            if (rigidbody == null)
             {
-                Vector3 force = CombineForces(this.transform.position);
-                this.transform.position += force * Time.deltaTime;
+                Vector3 force = CombineForces(transform.position);
+                transform.position += force * Time.deltaTime;
             }
         }
 
         private void FixedUpdate()
         {
-            if (this.rigidbody != null)
+            if (rigidbody != null)
             {
-                Vector3 force = CombineForces(this.rigidbody.position);
-                this.rigidbody.AddForce(force);
+                Vector3 force = CombineForces(rigidbody.position);
+                rigidbody.AddForce(force);
             }
         }
 
@@ -48,7 +49,7 @@ namespace Zigurous.Physics
         {
             Vector3 forces = Vector3.zero;
 
-            foreach (Magnet magnet in this.attractedMagnets) {
+            foreach (Magnet magnet in attractedMagnets) {
                 forces += CalculateForce(magnet, currentPosition);
             }
 
@@ -67,7 +68,7 @@ namespace Zigurous.Physics
             Magnet magnet = other.GetComponent<Magnet>();
 
             if (magnet != null) {
-                this.attractedMagnets.Add(magnet);
+                attractedMagnets.Add(magnet);
             }
         }
 
@@ -76,7 +77,7 @@ namespace Zigurous.Physics
             Magnet magnet = other.GetComponent<Magnet>();
 
             if (magnet != null) {
-                this.attractedMagnets.Remove(magnet);
+                attractedMagnets.Remove(magnet);
             }
         }
 
