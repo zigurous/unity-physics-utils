@@ -6,6 +6,7 @@ namespace Zigurous.Physics
     /// An object that produces a magnetic field that attracts objects.
     /// </summary>
     [AddComponentMenu("Zigurous/Physics/Magnet")]
+    [HelpURL("https://docs.zigurous.com/com.zigurous.physics/api/Zigurous.Physics/Magnet")]
     public sealed class Magnet : MonoBehaviour
     {
         /// <summary>

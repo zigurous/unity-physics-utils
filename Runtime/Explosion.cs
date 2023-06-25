@@ -7,6 +7,7 @@ namespace Zigurous.Physics
     /// being triggered.
     /// </summary>
     [AddComponentMenu("Zigurous/Physics/Explosion")]
+    [HelpURL("https://docs.zigurous.com/com.zigurous.physics/api/Zigurous.Physics/Explosion")]
     public class Explosion : MonoBehaviour
     {
         /// <summary>

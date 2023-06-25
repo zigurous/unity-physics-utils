@@ -5,8 +5,9 @@ namespace Zigurous.Physics.Events
     /// <summary>
     /// Invokes a custom unity event OnTriggerStay2D.
     /// </summary>
-    [RequireComponent(typeof(Collider2D))]
     [AddComponentMenu("Zigurous/Physics/Events/Trigger Stay 2D")]
+    [HelpURL("https://docs.zigurous.com/com.zigurous.physics/api/Zigurous.Physics.Events/TriggerStay2D")]
+    [RequireComponent(typeof(Collider2D))]
     public class TriggerStay2D : MonoBehaviour
     {
         /// <summary>

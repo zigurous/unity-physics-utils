@@ -5,8 +5,9 @@ namespace Zigurous.Physics.Events
     /// <summary>
     /// Invokes a custom unity event OnTriggerStay.
     /// </summary>
-    [RequireComponent(typeof(Collider))]
     [AddComponentMenu("Zigurous/Physics/Events/Trigger Stay")]
+    [HelpURL("https://docs.zigurous.com/com.zigurous.physics/api/Zigurous.Physics.Events/TriggerStay")]
+    [RequireComponent(typeof(Collider))]
     public class TriggerStay : MonoBehaviour
     {
         /// <summary>
