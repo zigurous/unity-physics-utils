@@ -60,23 +60,19 @@ namespace Zigurous.Physics
         {
             Vector3 direction = magnet.transform.position - currentPosition;
             float index = (magnet.radius - direction.magnitude) / magnet.radius;
-            return direction * magnet.strength * index;
+            return index * magnet.strength * direction;
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            Magnet magnet = other.GetComponent<Magnet>();
-
-            if (magnet != null) {
+            if (other.TryGetComponent(out Magnet magnet)) {
                 attractedMagnets.Add(magnet);
             }
         }
 
         private void OnTriggerExit(Collider other)
         {
-            Magnet magnet = other.GetComponent<Magnet>();
-
-            if (magnet != null) {
+            if (other.TryGetComponent(out Magnet magnet)) {
                 attractedMagnets.Remove(magnet);
             }
         }
