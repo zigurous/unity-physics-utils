@@ -2,7 +2,7 @@
   "name": "com.zigurous.physics",
   "version": "0.4.0",
   "displayName": "Physics Utils",
-  "description": "The Physics Utils package contains scripts and utilities for working with physics behaviors in Unity projects.",
+  "description": "A utility library for handling physics in Unity projects. Includes custom physics behaviors and materials, event triggers, extension methods, and more.",
   "unity": "2022.3",
   "repository": "https://github.com/zigurous/unity-physics-utils",
   "documentationUrl": "https://docs.zigurous.com/com.zigurous.physics",
